@@ -31,6 +31,8 @@ physikz.addRandomVelocity(circle, canvas, 5, 5);
 view.addChild(circle);
 circles.push(circle);
         }
+      
+
 
 
         // TODO 3 : Call the drawCircle() function
@@ -82,7 +84,6 @@ for (var i = 0; i < 50; i++) {
 
 }   
         }
-    
         /* 
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move

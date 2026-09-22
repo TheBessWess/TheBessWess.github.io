@@ -41,7 +41,107 @@ const projectileFlickerRate = 2.5; // the amount of size change per frame for pr
 
 let score = 0;
 let health = 100;
+const DEFAULT_VALUES = {
+  obstacle: {
+    spikes: {
+      imageUrl: "spikes",
+      width: 50,
+      height: 50,
+      hitWidth: 50,
+      hitHeight: 50,
+      speedX: 0,
+      speedY: 0,
+      minY: 0,
+      maxY: 0,
+      contactHealthChange: -10,
+      contactScoreChange: 0,
+      projectileHealthChange: 0,
+      projectileScoreChange: 0,
+      collect: false,
+      hp: 1
+    }
+  },
 
+  enemy: {
+    bug: {
+      imageUrl: "bug",
+      width: 50,
+      height: 50,
+      hitWidth: 50,
+      hitHeight: 50,
+      speedX: 0,
+      speedY: 0,
+      minY: 0,
+      maxY: 0,
+      contactHealthChange: -10,
+      contactScoreChange: 0,
+      projectileHealthChange: 0,
+      projectileScoreChange: 0,
+      collect: false,
+      hp: 1
+    }
+  },
+
+  powerup: {
+    healthUp: {
+      imageUrl: "healthUp",
+      width: 40,
+      height: 40,
+      hitWidth: 40,
+      hitHeight: 40,
+      speedX: 0,
+      speedY: 0,
+      minY: 0,
+      maxY: 0,
+      contactHealthChange: 20,
+      contactScoreChange: 10,
+      projectileHealthChange: 0,
+      projectileScoreChange: 0,
+      collect: true,
+      hp: 0
+    }
+  },
+
+  platform: {
+    basicPlatform: {
+      imageUrl: "basicPlatform",
+      width: 150,
+      height: 30,
+      hitWidth: 150,
+      hitHeight: 30,
+      speedX: 0,
+      speedY: 0,
+      minY: 0,
+      maxY: 0,
+      contactHealthChange: 0,
+      contactScoreChange: 0,
+      projectileHealthChange: 0,
+      projectileScoreChange: 0,
+      collect: false,
+      hp: Infinity
+    }
+  },
+
+  goal: {
+    flag: {
+      imageUrl: "flag",
+      width: 50,
+      height: 100,
+      hitWidth: 50,
+      hitHeight: 100,
+      speedX: 0,
+      speedY: 0,
+      minY: 0,
+      maxY: 0,
+      contactHealthChange: 0,
+      contactScoreChange: 0,
+      projectileHealthChange: 0,
+      projectileScoreChange: 0,
+      collect: false,
+      hp: Infinity
+    }
+  }
+};
 /////////////////////////////////////////////////
 //////////ONLY CHANGE ABOVE THIS POINT///////////
 /////////////////////////////////////////////////
